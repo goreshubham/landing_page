@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <Style>
+       body{
+        font-family: 'Ubuntu', sans-serif;
+       }
+        header{
+            width:100%;
+            height:100vh;
+            background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)),url(pen.jpg);
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        nav{
+            width:100%;
+            height:100px;
+            color: rgb(250, 244, 244);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo{
+            font-size: 2em;
+            font-style:3;
+            letter-spacing: 2px;
+        }
+        .menu{
+            padding-top: 30px;
+        }
+        .menu a{
+            text-decoration:none;
+            background-color: tomato;
+            border-radius: 10px;
+            color: rgb(255, 249, 249);
+            padding: 8px 15px;
+            font-size: 20px;
+            position: relative;
+        }
+        .menu a:hover{
+            background-color: white;
+            color: black;
+            font-size: 24px;
+        }
+        .menu a:before{
+            content:'';
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            border-bottom: 2px black;
+            transition: 0.4s linear;
+        }
+        .menu a:hover:before
+        {
+            width: 90%;
+        }
+        .register{
+            margin-bottom: 30px;
+            /* padding-top: 20px; */
+        }
+        .register a{
+            text-decoration: none;
+            color: rgb(249, 244, 244);
+            padding: 8px 12px;
+            font-size: 20px;
+            background-color:tomato;
+            border-radius: 10px;
+        }
+        .register a:hover{
+            background-color: white;
+            color: black;
+            max-width: 20px;
+        }
+        .HeaderText{
+            max-width: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            color: white;
+        }
+        .HeaderText span{
+            letter-spacing: 4px;
+            font-size:20px;
+        }
+        .HeaderText h1{
+            font-size: 3.5em;
+        }
+        .HeaderText a{
+            text-decoration: none;
+            background-color: tomato;
+            color: white;
+            padding: 10px 20px;
+            border-radius:10px;
+            letter-spacing: 4px;
+            margin-top: 100px;
+        }
+        .HeaderText a:hover{
+            background-color: white;
+            color: black;
+            max-width: 20px;
+            font-size:25px;
+        }
+        .search input{
+            font-size: 20px;
+            width: 450px;
+            height: 35px;
+            border-radius: 5px;
+            padding-top: 10px 20px;
+        }
+        .search{
+            padding-top: 20px;
+        }
+    </Style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/it.png" alt="" style="height: 35px;width:35px; image: resolution 34px;color:white;">
+                Books
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Offer</a>
+                <a href="#">Our Sites</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+            </div>
+            <div class="search">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" placeholder="Search Book Here">
+                
+                
+            </div>
+            
+        </nav>
+        <section class="HeaderText">
+            <span>Enjoy</span>
+            <h1>Advance Technology Books</h1>
+            <br>
+            <div class="register">
+                <a href="#"> Register</a>
+            </div>
+            <br>
+            <a href="#">Buy Book Here</a>
+        </section>
+    </header>
+</body>
+</html>
