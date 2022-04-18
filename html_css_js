@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempreature Converter</title>
+    <style>
+        body{
+            padding: 50px 100px;
+            background: linear-gradient(to right, #ff0cef, #0c6dff,#e8f256)
+        }
+        h1{
+            text-align: center;
+            color:rgb(236, 248, 15);
+            padding-top: 40px;
+            }
+        #cl{
+            /*background-color: rgb(0, 0, 0);*/
+            background-image: url("temp.jpeg");
+            background-repeat: no-repeat;
+        }
+        #cn{
+            text-align: center;
+            padding: 100px;
+        }
+        #cl{
+            color: rgb(6, 227, 227);
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .input{
+            display:inline-block;
+            padding-bottom: 40px;
+            border-color: red 20px 20px;
+
+        }
+        .iv{
+            padding: 10px 20px ;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 40px;
+            width: 200px;
+            text-align: center;
+        }
+        label{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cl">
+    <h1 style="font-size: 50px;">Tempreature Converter</h1>
+    <div id="cn">
+            <div class="input">
+                <label id="cl">Celcius</label>
+                <br>
+                <input type="number" value="0" id="c" class="iv">
+                
+            </div>
+            <div class="input">
+                <label id="cl">Fahrenheit </label>
+                <br>
+                <input type="number"  value="32" id="f" class="iv">
+                
+            </div>
+    </div>
+</div>
+<script>
+        var c=document.getElementById("c");
+        var f=document.getElementById("f");
+     c.addEventListener('input',function()
+     {
+         let cel=this.value;
+         let far=(cel * 9/5) + 32 ;
+         if(!Number.isInteger(far))
+         {
+                far=far.toFixed(4);
+         }
+        f.value=far;
+        });
+     f.addEventListener('input',function()
+     {
+        let far=this.value;
+         let cel=(far - 32) * 5/9 ;
+         if(!Number.isInteger(cel))
+         {
+             cel=cel.toFixed(4);
+         }
+        c.value=cel;
+     });
+
+</Script>
+</body>
+</html>
